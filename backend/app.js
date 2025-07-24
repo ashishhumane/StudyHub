@@ -13,7 +13,7 @@ const app = express()
 app.use(cookieParser())
 app.use(express.json())
 app.use(cors({
-    origin: 'http://localhost:5173', // or your frontend domain
+    origin: 'https://studyhub-1-ofa0.onrender.com', // or your frontend domain
     credentials: true
 }));
 
