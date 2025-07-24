@@ -3,8 +3,7 @@ import Header from '../components/header';
 import { Bot, Mic, Send } from 'lucide-react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
-const baseURl = process.env.VITE_BACKEND_URL
-
+const baseURl = import.meta.env.VITE_BACKEND_URL;
 const Chatbot = () => {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([]);

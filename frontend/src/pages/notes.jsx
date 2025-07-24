@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Plus, X, Calendar, Search } from 'lucide-react';
 import axios from 'axios';
 import NoteCard from '../components/noteCrad';
-const baseURl = process.env.VITE_BACKEND_URL
+const baseURl = import.meta.env.VITE_BACKEND_URL;
 export default function Notes() {
   const defaultNotes = [
     {
