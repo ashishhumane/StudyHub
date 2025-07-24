@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+const baseURl = process.env.VITE_BACKEND_URL
 const Login = ({ setResponse }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
