@@ -35,7 +35,7 @@ const Login = ({ setResponse }) => {
 
         if (validate()) {
             try {
-                const res = await axios.post('http://localhost:3000/auth/login', {
+                const res = await axios.post(`${baseURl}/auth/login`, {
                     email,
                     password
                 }, {

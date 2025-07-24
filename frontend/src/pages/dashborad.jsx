@@ -40,7 +40,7 @@ const Dashborad = () => {
 	};
 
 	useEffect(() => {
-		axios.get('http://localhost:3000/user/getuser', { withCredentials: true })
+		axios.get(`${baseURl}/user/getuser`, { withCredentials: true })
 			.then(res => {
 				// console.log('Response from backend:', res.data);
 				setUser(res.data.user);
@@ -51,7 +51,7 @@ const Dashborad = () => {
 	}, []);
 
 	useEffect(() => {
-		axios.get('http://localhost:3000/notes/my-notes', {
+		axios.get(`${baseURl}/notes/my-notes`, {
 			withCredentials: true
 		})
 			.then(res => {

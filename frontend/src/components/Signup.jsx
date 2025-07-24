@@ -42,7 +42,7 @@ const Signup = ({ setResponse }) => {
         if (validate()) {
             try {
                 const res = await axios.post(
-                    'http://localhost:3000/auth/create',
+                    `${baseURl}/auth/create`,
                     { username, email, password },
                     { withCredentials: true }
                 );

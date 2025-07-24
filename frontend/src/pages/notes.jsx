@@ -28,7 +28,7 @@ export default function Notes() {
   const [response, setResponse] = useState({ status: null, message: '' });
 
   useEffect(() => {
-    axios.get('http://localhost:3000/notes/my-notes', { withCredentials: true })
+    axios.get(`${baseURl}/notes/my-notes`, { withCredentials: true })
       .then(res => {
         if (res.data.length === 0) {
           setNotes(defaultNotes);
@@ -49,7 +49,7 @@ export default function Notes() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        'http://localhost:3000/notes/create',
+        `${baseURl}/notes/create`,
         { formData },
         { withCredentials: true }
       );
@@ -60,7 +60,7 @@ export default function Notes() {
         setFormData({ title: '', content: '' });
 
         // Optionally re-fetch notes
-        const newRes = await axios.get('http://localhost:3000/notes/my-notes', { withCredentials: true });
+        const newRes = await axios.get(`${baseURl}/notes/my-notes`, { withCredentials: true });
         setNotes(newRes.data);
 
         setTimeout(() => {

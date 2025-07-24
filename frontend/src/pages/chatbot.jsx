@@ -33,7 +33,7 @@ const Chatbot = () => {
     }]);
     
     try {
-      const res = await axios.post('http://localhost:3000/notes/chatbot', { input }, { withCredentials: true });
+      const res = await axios.post(`${baseURl}/notes/chatbot`, { input }, { withCredentials: true });
       const generatedText = res.data?.response?.parts?.[0]?.text || '';
       
       console.log("Generated Text:", generatedText);
